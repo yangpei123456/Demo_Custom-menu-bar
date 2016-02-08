@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="9046" systemVersion="15A284" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" initialViewController="BYZ-38-t0r">
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="9035"/>
+    </dependencies>
+    <scenes>
+        <!--Main View Controller-->
+        <scene sceneID="tne-QT-ifu">
+            <objects>
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
+                        <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
+                        <rect key="frame" x="0.0" y="0.0" width="320" height="568"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="oTl-KL-bJP">
+                                <rect key="frame" x="280" y="0.0" width="40" height="50"/>
+                                <animations/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                                <rect key="contentStretch" x="0.0" y="1" width="1" height="1"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="8LK-74-Ldf"/>
+                                    <constraint firstAttribute="height" constant="50" id="cSQ-s4-DHH"/>
+                                </constraints>
+                                <state key="normal" image="more.png">
+                                    <color key="titleColor" white="0.0" alpha="1" colorSpace="calibratedWhite"/>
+                                </state>
+                                <connections>
+                                    <action selector="clickMore:" destination="BYZ-38-t0r" eventType="touchUpInside" id="aar-wN-bJI"/>
+                                </connections>
+                            </button>
+                            <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="ul0-UC-hb5">
+                                <rect key="frame" x="0.0" y="0.0" width="280" height="50"/>
+                                <animations/>
+                            </scrollView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="v94-wQ-7b8">
+                                <rect key="frame" x="0.0" y="50" width="320" height="518"/>
+                                <animations/>
+                            </button>
+                        </subviews>
+                        <animations/>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailing" secondItem="oTl-KL-bJP" secondAttribute="trailing" id="1Gg-mo-vHU"/>
+                            <constraint firstAttribute="trailing" secondItem="v94-wQ-7b8" secondAttribute="trailing" id="1sj-Oc-LTA"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="v94-wQ-7b8" secondAttribute="bottom" id="3Xa-B8-uOs"/>
+                            <constraint firstItem="v94-wQ-7b8" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="Rt5-EN-TdR"/>
+                            <constraint firstItem="ul0-UC-hb5" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="Wa2-vM-Woo"/>
+                            <constraint firstItem="oTl-KL-bJP" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="bf5-Ys-Otv"/>
+                            <constraint firstItem="ul0-UC-hb5" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="bhT-VH-Ir4"/>
+                            <constraint firstItem="oTl-KL-bJP" firstAttribute="leading" secondItem="ul0-UC-hb5" secondAttribute="trailing" id="vtb-BD-jk4"/>
+                            <constraint firstItem="v94-wQ-7b8" firstAttribute="top" secondItem="ul0-UC-hb5" secondAttribute="bottom" id="wUy-J0-6ZO"/>
+                            <constraint firstItem="oTl-KL-bJP" firstAttribute="height" secondItem="ul0-UC-hb5" secondAttribute="height" id="xRc-fh-LSh"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="L04-fG-DBb">
+                        <nil key="title"/>
+                    </navigationItem>
+                    <nil key="simulatedStatusBarMetrics"/>
+                    <nil key="simulatedTopBarMetrics"/>
+                    <connections>
+                        <outlet property="scrollView" destination="ul0-UC-hb5" id="6IC-Zm-06b"/>
+                        <outlet property="tableView" destination="v94-wQ-7b8" id="cHu-dz-CtN"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="414" y="419"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="more.png" width="40" height="40"/>
+    </resources>
+</document>
